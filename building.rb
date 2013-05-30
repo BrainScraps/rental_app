@@ -1,4 +1,4 @@
-def Building
+class Building
   attr_accessor :address, :style, :has_doorman, :is_walkup, :num_floors, :apartments
 
   def initialize(address, style, has_doorman, is_walkup, num_floors)
@@ -7,7 +7,7 @@ def Building
     @has_doorman = has_doorman
     @is_walkup = is_walkup
     @num_floors = num_floors
-    @apartments = []
+    @apartments = {}
   end
 
   def to_s

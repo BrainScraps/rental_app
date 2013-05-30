@@ -1,7 +1,8 @@
 class Apartment
-  attr_accessor :rent, :sqft, :num_bathrooms, :num_bedrooms, :renters
+  attr_accessor :name, :rent, :sqft, :num_bathrooms, :num_bedrooms, :renters
 
-  def initialize (sqft, num_bedrooms, num_bathrooms)
+  def initialize (name, sqft, num_bedrooms, num_bathrooms)
+    @name = name
     @rent = 0
     @sqft = sqft
     @num_bedrooms = num_bedrooms
@@ -14,6 +15,6 @@ class Apartment
   end
 
   def to_s 
-    "apt is #{@sqft} square feet and has #{@renters.count} renters"
+    "apt #{@name} is #{@sqft} square feet and has #{@renters.count} renters"
   end
 end
