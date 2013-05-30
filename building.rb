@@ -10,8 +10,15 @@ class Building
     @apartments = {}
   end
 
+  def count_renters
+    i = 0 
+    @apartments.each { |k, v|
+     i += v.count}
+    return i 
+  end
+
   def to_s
-    "the #{@style} building at #{@address} has #{@apartments.count} apartments"
+    "the #{@style} building at #{@address} has #{@apartments.count} apartments with #{count_renters}" 
   end
   
 end
